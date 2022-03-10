@@ -12,10 +12,13 @@ It was the Capstone Project for the Machine Learning Engineer course by [FourthB
 Check out the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
 
 ## The Datasets
-- Mendeley
- - [Version 2 of the project](https://data.mendeley.com/datasets/rscbjbr9sj/2)
- - [Version 3 of the project](https://data.mendeley.com/datasets/rscbjbr9sj/3)
- - [Direct download](https://data.mendeley.com/public-files/datasets/rscbjbr9sj/files/5699a1d8-d1b6-45db-bb92-b61051445347/file_downloaded)
+- Mendeley (The one used during the project)
+ - [Version 2 of the project](https://data.mendeley.com/datasets/rscbjbr9sj/2).
+ - [Version 3 of the project](https://data.mendeley.com/datasets/rscbjbr9sj/3).
+ - [Direct download](https://data.mendeley.com/public-files/datasets/rscbjbr9sj/files/5699a1d8-d1b6-45db-bb92-b61051445347/file_downloaded).
+- Kaggle
+ - [Kaggle Dataset](https://www.kaggle.com/paultimothymooney/kermany2018/).
+ - [Direct download](https://www.kaggle.com/paultimothymooney/kermany2018/download) if registered in Kaggle.
 
 ## The process
 The project was done in these steps:
@@ -41,14 +44,23 @@ In this notebook we created a Pandas DataFrame to store all the information abou
 
 The results for this notebook are two CSV file included with it:
 - The first CSV (`mendeley_filelist.csv`) contains information on all files.
-- The second CSV (`mendeley_filelist_combo_cond_md5.csv`) removing duplicates (duplicates are considered when a two or more files have the same condition and md5).
+- The second CSV (`mendeley_filelist_combo_cond_md5.csv`) removing duplicates (duplicates are considered when two or more files have the same condition and md5).
 
 ### data_wrangling_comparison.ipynb
-`data_wrangling/data_wrangling_comparison.ipynb`
+[`data_wrangling/data_wrangling_comparison.ipynb`](./data_wrangling/data_wrangling_comparison.ipynb)
 
 The objective of this notebook was to compare both datasets to see if they had the same unduplicated notebooks.
 
 Both datasets contained the same unduplicated files. Se from this point on we used the Mendeley one.
+
+### Data Wrangling conclusions
+We use the [Mendeley Dataset](https://data.mendeley.com/public-files/datasets/rscbjbr9sj/files/5699a1d8-d1b6-45db-bb92-b61051445347/file_downloaded).
+
+<figure align="center"><img src="./images/data_distribution.png" alt="Dataset class (conditions) distribution" style="width:50%"><figcaption align = "center">Dataset class (conditions) distribution</figcaption></figure>
+
+We consider duplicates when two or more files have the same condition and md5.
+
+The Mendeley dataset we used (as the Kaggle one) contains a total of 84,484 files, of which 7,357 are duplicates. We ended with 77,127 usable files. We used a Pandas DataFrame to store these files’ information and to do further work.
 
 
 
