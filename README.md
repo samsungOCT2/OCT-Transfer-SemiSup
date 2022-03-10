@@ -7,10 +7,11 @@
 - [The Datasets and Data Wrangling](#the-datasets-and-data-wrangling)
   - [The Data Wrangling Notebooks](#the-data-wrangling-notebooks)
     - [data_wrangling_from_kaggle_dataset.ipynb](#data_wrangling_from_kaggle_datasetipynb)
-    - [data_wrangling_from_mendeley.ipynb]()
-    - [data_wrangling_comparison.ipynb]()
+    - [data_wrangling_from_mendeley.ipynb](#data_wrangling_from_mendeleyipynb)
+    - [data_wrangling_comparison.ipynb](#data_wrangling_comparisonipynb)
   - [Data Wrangling conclusions](#data-wrangling-conclusions)
 
+## 1. About this repository
 ## About this repository
 *[↑ TOC](#table-of-contents)*
 
