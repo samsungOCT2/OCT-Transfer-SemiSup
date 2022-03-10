@@ -13,12 +13,12 @@ Check out the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
 
 ## The Datasets
 - Mendeley (The one used during the project)
- - [Version 2 of the project](https://data.mendeley.com/datasets/rscbjbr9sj/2).
- - [Version 3 of the project](https://data.mendeley.com/datasets/rscbjbr9sj/3).
- - [Direct download](https://data.mendeley.com/public-files/datasets/rscbjbr9sj/files/5699a1d8-d1b6-45db-bb92-b61051445347/file_downloaded).
+  - [Version 2 of the project](https://data.mendeley.com/datasets/rscbjbr9sj/2).
+  - [Version 3 of the project](https://data.mendeley.com/datasets/rscbjbr9sj/3).
+  - [Direct download](https://data.mendeley.com/public-files/datasets/rscbjbr9sj/files/5699a1d8-d1b6-45db-bb92-b61051445347/file_downloaded).
 - Kaggle
- - [Kaggle Dataset](https://www.kaggle.com/paultimothymooney/kermany2018/).
- - [Direct download](https://www.kaggle.com/paultimothymooney/kermany2018/download) if registered in Kaggle.
+  - [Kaggle Dataset](https://www.kaggle.com/paultimothymooney/kermany2018/).
+  - [Direct download](https://www.kaggle.com/paultimothymooney/kermany2018/download) if registered in Kaggle.
 
 ## The process
 The project was done in these steps:
