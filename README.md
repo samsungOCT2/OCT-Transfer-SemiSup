@@ -1,18 +1,17 @@
 # Retinal OCT recognition experiments with Transfer Learning and Semi Supervised Learning
 
 ## Table Of Contents
-- [About this repository](#about-this-repository)
-- [Introduction](#introduction)
-- [The process](#the-process)
-- [The Datasets and Data Wrangling](#the-datasets-and-data-wrangling)
-  - [The Data Wrangling Notebooks](#the-data-wrangling-notebooks)
-    - [data_wrangling_from_kaggle_dataset.ipynb](#data_wrangling_from_kaggle_datasetipynb)
-    - [data_wrangling_from_mendeley.ipynb](#data_wrangling_from_mendeleyipynb)
-    - [data_wrangling_comparison.ipynb](#data_wrangling_comparisonipynb)
-  - [Data Wrangling conclusions](#data-wrangling-conclusions)
+- [1. About this repository](#1-about-this-repository)
+- [2. Introduction](#2-introduction)
+- [3. The process](#3-the-process)
+- [4. The Datasets and Data Wrangling](#4-the-datasets-and-data-wrangling)
+  - [4.1. The Data Wrangling Notebooks](#41-the-data-wrangling-notebooks)
+    - [4.1.1. data_wrangling_from_kaggle_dataset.ipynb](#411-data_wrangling_from_kaggle_datasetipynb)
+    - [4.1.2. data_wrangling_from_mendeley.ipynb](#412-data_wrangling_from_mendeleyipynb)
+    - [4.1.3. data_wrangling_comparison.ipynb](#413data_wrangling_comparisonipynb)
+  - [4.2. Data Wrangling conclusions](#42-data-wrangling-conclusions)
 
 ## 1. About this repository
-## About this repository
 *[↑ TOC](#table-of-contents)*
 
 This project was done by:
@@ -57,7 +56,7 @@ The proposed project pointed to a Kaggle Dataset (link below). But this data adv
   - Kaggle API command: `kaggle datasets download -d paultimothymooney/kermany2018`
 
 
-### The Data Wrangling Notebooks
+### 4.1. The Data Wrangling Notebooks
 *[↑ TOC](#table-of-contents)*
 
 The data wrangling was done in the three notebooks listed next.
