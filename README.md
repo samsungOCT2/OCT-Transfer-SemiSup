@@ -8,7 +8,7 @@
   - [4.1. The Data Wrangling Notebooks](#41-the-data-wrangling-notebooks)
     - [4.1.1. data_wrangling_from_kaggle_dataset.ipynb](#411-data_wrangling_from_kaggle_datasetipynb)
     - [4.1.2. data_wrangling_from_mendeley.ipynb](#412-data_wrangling_from_mendeleyipynb)
-    - [4.1.3. data_wrangling_comparison.ipynb](#413data_wrangling_comparisonipynb)
+    - [4.1.3. data_wrangling_comparison.ipynb](#413-data_wrangling_comparisonipynb)
   - [4.2. Data Wrangling conclusions](#42-data-wrangling-conclusions)
 
 ## 1. About this repository
