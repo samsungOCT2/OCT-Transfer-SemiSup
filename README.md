@@ -23,7 +23,7 @@ It was the Capstone Project for the Machine Learning Engineer course by [FourthB
 
 Check out the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
 
-## Introduction
+## 2. Introduction
 *[↑ TOC](#table-of-contents)*
 
 Retinal OCTs (Optical Coherence Tomography) are images created by scanning the back of the eye using specified equipment. An ophthalmologist can detect different eye conditions to treat them. Detecting and treating these conditions in early stages usually means eye recovery and no vision loss.
@@ -32,7 +32,7 @@ In the project, three abnormal conditions were present alongside normal retinas.
 
 **We improved performance on a limited (5%) labeled dataset with a semi-supervised learning approach (+0.9% F1).**
 
-## The process
+## 3. The process
 *[↑ TOC](#table-of-contents)*
 
 The project was done in these steps:
@@ -41,7 +41,7 @@ The project was done in these steps:
 - Transfer Learning after training the model on COVID Dataset ([*COVID-CTset: A Large COVID-19 CT Scans dataset*](https://www.kaggle.com/mohammadrahimzadeh/covidctset-a-large-covid19-ct-scans-dataset)).
 - Semi supervised learning using only 5% of labeled data.
 
-## The Datasets and Data Wrangling
+## 4. The Datasets and Data Wrangling
 *[↑ TOC](#table-of-contents)*
 
 The proposed project pointed to a Kaggle Dataset (link below). But this data advertised a 5.81GB dataset and when downloaded it was more than 10GB. So we decided to review the files. We end up using the Mendeley Dataset (link below), further explained below in [Data Wrangling conclusions](#data-wrangling-conclusions)
@@ -61,7 +61,7 @@ The proposed project pointed to a Kaggle Dataset (link below). But this data adv
 
 The data wrangling was done in the three notebooks listed next.
 
-#### data_wrangling_from_kaggle_dataset.ipynb
+#### 4.1.1. data_wrangling_from_kaggle_dataset.ipynb
 *[↑ TOC](#table-of-contents)*
 
 [`data_wrangling/kaggle/data_wrangling_from_kaggle_dataset.ipynb`](./data_wrangling/kaggle/data_wrangling_from_kaggle_dataset.ipynb)
@@ -70,7 +70,7 @@ In this notebook we created a Pandas DataFrame to store all the information abou
 
 The result for this notebook is a CSV file included with it.
 
-#### data_wrangling_from_mendeley.ipynb
+#### 4.1.2. data_wrangling_from_mendeley.ipynb
 *[↑ TOC](#table-of-contents)*
 
 [`data_wrangling/mendeley/data_wrangling_from_mendeley.ipynb`](./data_wrangling/mendeley/data_wrangling_from_mendeley.ipynb)
@@ -81,7 +81,7 @@ The results for this notebook are two CSV file included with it:
 - The first CSV (`mendeley_filelist.csv`) contains information on all files.
 - The second CSV (`mendeley_filelist_combo_cond_md5.csv`) removing duplicates (duplicates are considered when two or more files have the same condition and md5).
 
-#### data_wrangling_comparison.ipynb
+#### 4.1.3. data_wrangling_comparison.ipynb
 *[↑ TOC](#table-of-contents)*
 
 [`data_wrangling/data_wrangling_comparison.ipynb`](./data_wrangling/data_wrangling_comparison.ipynb)
@@ -90,7 +90,7 @@ The objective of this notebook was to compare both datasets to see if they had t
 
 Both datasets contained the same unduplicated files. Se from this point on we used the Mendeley one.
 
-### Data Wrangling conclusions
+### 4.2. Data Wrangling conclusions
 *[↑ TOC](#table-of-contents)*
 
 We use the [Mendeley Dataset](https://data.mendeley.com/public-files/datasets/rscbjbr9sj/files/5699a1d8-d1b6-45db-bb92-b61051445347/file_downloaded).
