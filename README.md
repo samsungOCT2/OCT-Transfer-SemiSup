@@ -1,5 +1,15 @@
 # Samsung OCT Project
 
+## Table Of Contents
+- [Intro](#intro)
+- [The Datasets](#the-datasets)
+- [The process](#the-process)
+- [Data Wrangling](#data-wrangling)
+  - [data_wrangling_from_kaggle_dataset.ipynb](#data_wrangling_from_kaggle_datasetipynb)
+  - [data_wrangling_from_mendeley.ipynb]()
+  - [data_wrangling_comparison.ipynb]()
+  - [Data Wrangling conclusions](#data-wrangling-conclusions)
+
 ## Intro
 
 This project was done by:
