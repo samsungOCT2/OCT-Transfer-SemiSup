@@ -4,7 +4,8 @@
 
 
 
-## Table Of Contents
+---
+# Table Of Contents
 - [1. About this repository](#1-about-this-repository)
 - [2. Introduction](#2-introduction)
 - [3. The process](#3-the-process)
@@ -27,18 +28,19 @@
 - [8. Semi-Supervised Learning](#8-semi-supervised-learning)
 - [9. Extra Files](#9-extra-files)
   - [9.1 get_stats_on_test_set.py](#91-getstatsontestsetpy)
+---
 
 
 
 
-## 0. Requirements
+# 0. Requirements
 This project was done in January 2022. It uses TensorFlow 2.
 
 
 
 
 
-## 1. About this repository
+# 1. About this repository
 *[↑ TOC](#table-of-contents)*
 
 This project was done by:
@@ -54,7 +56,7 @@ Check out the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
 
 
 
-## 2. Introduction
+# 2. Introduction
 *[↑ TOC](#table-of-contents)*
 
 Retinal OCTs (Optical Coherence Tomography) are images created by scanning the back of the eye using specified equipment. An ophthalmologist can detect different eye conditions to treat them. Detecting and treating these conditions in early stages usually means eye recovery and no vision loss.
@@ -67,7 +69,7 @@ In the project, three abnormal conditions were present alongside normal retinas.
 
 
 
-## 3. The process
+# 3. The process
 *[↑ TOC](#table-of-contents)*
 
 The project was done in these steps:
@@ -81,7 +83,7 @@ The project was done in these steps:
 
 
 
-## 4. The Datasets and Data Wrangling
+# 4. The Datasets and Data Wrangling
 *[↑ TOC](#table-of-contents)*
 
 The proposed project pointed to a Kaggle Dataset (link below). But this data advertised a 5.81GB dataset and when downloaded it was more than 10GB. So we decided to review the files. We end up using the Mendeley Dataset (link below), further explained below in [Data Wrangling conclusions](#data-wrangling-conclusions)
@@ -95,12 +97,12 @@ The proposed project pointed to a Kaggle Dataset (link below). But this data adv
   - [Direct download](https://www.kaggle.com/paultimothymooney/kermany2018/download) if registered in Kaggle.
   - Kaggle API command: `kaggle datasets download -d paultimothymooney/kermany2018`
 
-### 4.1. The Data Wrangling Notebooks
+## 4.1. The Data Wrangling Notebooks
 *[↑ TOC](#table-of-contents)*
 
 The data wrangling was done in the three notebooks listed next.
 
-#### 4.1.1. data_wrangling_from_kaggle_dataset.ipynb
+### 4.1.1. data_wrangling_from_kaggle_dataset.ipynb
 *[↑ TOC](#table-of-contents)*
 
 [`data_wrangling/kaggle/data_wrangling_from_kaggle_dataset.ipynb`](./data_wrangling/kaggle/data_wrangling_from_kaggle_dataset.ipynb)
@@ -109,7 +111,7 @@ In this notebook we created a Pandas DataFrame to store all the information abou
 
 The result for this notebook is a CSV file included with it.
 
-#### 4.1.2. data_wrangling_from_mendeley.ipynb
+### 4.1.2. data_wrangling_from_mendeley.ipynb
 *[↑ TOC](#table-of-contents)*
 
 [`data_wrangling/mendeley/data_wrangling_from_mendeley.ipynb`](./data_wrangling/mendeley/data_wrangling_from_mendeley.ipynb)
@@ -120,7 +122,7 @@ The results for this notebook are two CSV file included with it:
 - The first CSV (`mendeley_filelist.csv`) contains information on all files.
 - The second CSV (`mendeley_filelist_combo_cond_md5.csv`) removing duplicates (duplicates are considered when two or more files have the same condition and md5).
 
-#### 4.1.3. data_wrangling_comparison.ipynb
+### 4.1.3. data_wrangling_comparison.ipynb
 *[↑ TOC](#table-of-contents)*
 
 [`data_wrangling/data_wrangling_comparison.ipynb`](./data_wrangling/data_wrangling_comparison.ipynb)
@@ -129,7 +131,7 @@ The objective of this notebook was to compare both datasets to see if they had t
 
 Both datasets contained the same unduplicated files. Se from this point on we used the Mendeley one.
 
-### 4.2. Data Wrangling conclusions
+## 4.2. Data Wrangling conclusions
 *[↑ TOC](#table-of-contents)*
 
 We use the [Mendeley Dataset](https://data.mendeley.com/public-files/datasets/rscbjbr9sj/files/5699a1d8-d1b6-45db-bb92-b61051445347/file_downloaded).
@@ -150,14 +152,14 @@ The Mendeley dataset we used (as the Kaggle one) contains a total of 84,484 file
 
 
 
-## 5. Model and Hyperparameter selection
+# 5. Model and Hyperparameter selection
 *[↑ TOC](#table-of-contents)*
 
 
 
 
 
-## 6. Baseline experiments
+# 6. Baseline experiments
 *[↑ TOC](#table-of-contents)*
 
 Many experiments were done for our baseline, these are listed in the below sections.
@@ -168,7 +170,7 @@ Not all of these experiments were presented in the [Report](./report.pdf) and in
 - [6.4. v2_model OCT TensorFlow Resnet 50 Model.ipynb](#64-v2model-oct-tensorflow-resnet-50-modelipynb)
 - [6.5. v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb](#65-v2frozenreduced5percent-oct-tensorflow-resnet-50-modelipynb)
 
-### 6.1. Baseline experiments (1), Resnet50, Full Dataset, Training All Layers
+## 6.1. Baseline experiments (1), Resnet50, Full Dataset, Training All Layers
 *[↑ TOC](#table-of-contents)*
 
 The idea behind these experiments was to have a baseline with a fully trained Neural Network using the complete dataset.
@@ -180,7 +182,7 @@ Two experiments were done:
 **_**: Not used for the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
 <br>**x**: Used for the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
 
-### 6.2. Baseline experiments (2), Resnet50, Reduced Dataset, Training All Layers
+## 6.2. Baseline experiments (2), Resnet50, Reduced Dataset, Training All Layers
 *[↑ TOC](#table-of-contents)*
 
 The idea behind these experiments was to have a baseline with a fully trained Neural Network a reduced dataset.
@@ -194,7 +196,7 @@ Four experiments were done:
 **_**: Not used for the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
 <br>**x**: Used for the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
 
-### 6.3. Baseline experiments (3), Resnet50, Reduced Dataset, Training Last 34 Layers
+## 6.3. Baseline experiments (3), Resnet50, Reduced Dataset, Training Last 34 Layers
 *[↑ TOC](#table-of-contents)*
 
 The idea behind these experiments was to have a baseline with a Neural Network trained on only the last 34 layers and a reduced dataset.
@@ -208,7 +210,7 @@ Four experiments were done:
 **_**: Not used for the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
 <br>**x**: Used for the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
 
-### 6.4. v2_model OCT TensorFlow Resnet 50 Model.ipynb
+## 6.4. v2_model OCT TensorFlow Resnet 50 Model.ipynb
 *[↑ TOC](#table-of-contents)*
 
 [`baselines/resnet50_full_dataset_training_all_layers/v2_model OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_full_dataset_training_all_layers/v2_model%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
@@ -245,7 +247,7 @@ Below are some images with stats about this model.
 
 </div>
 
-### 6.5. v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb
+## 6.5. v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb
 *[↑ TOC](#table-of-contents)*
 
 [`baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_5percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
@@ -286,32 +288,32 @@ Below are some images with stats about this model.
 
 
 
-## 7. Transfer Learning
+# 7. Transfer Learning
 *[↑ TOC](#table-of-contents)*
 
-### 7.1. The Dataset
+## 7.1. The Dataset
 *[↑ TOC](#table-of-contents)*
 
 ([*COVID-CTset: A Large COVID-19 CT Scans dataset*](https://www.kaggle.com/mohammadrahimzadeh/covidctset-a-large-covid19-ct-scans-dataset))
 
-### 7.2. The Notebooks
+## 7.2. The Notebooks
 *[↑ TOC](#table-of-contents)*
 
 
 
 
 
-## 8. Semi-Supervised Learning
+# 8. Semi-Supervised Learning
 *[↑ TOC](#table-of-contents)*
 
 
 
 
 
-## 9. Extra Files
+# 9. Extra Files
 *[↑ TOC](#table-of-contents)*
 
-## 9.1 get_stats_on_test_set.py
+# 9.1 get_stats_on_test_set.py
 *[↑ TOC](#table-of-contents)*
 
 [`extra_files/get_stats_on_test_set.py`](./extra_files/get_stats_on_test_set.py)
