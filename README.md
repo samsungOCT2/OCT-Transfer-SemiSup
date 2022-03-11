@@ -10,6 +10,11 @@
     - [4.1.2. data_wrangling_from_mendeley.ipynb](#412-data_wrangling_from_mendeleyipynb)
     - [4.1.3. data_wrangling_comparison.ipynb](#413-data_wrangling_comparisonipynb)
   - [4.2. Data Wrangling conclusions](#42-data-wrangling-conclusions)
+- [5. Baseline experiments](5-baseline-experiments)
+  - [5.1. Baseline, Resnet50, Full Dataset, Training All Layers](#51-baseline-resnet50-full-dataset-training-all-layers)
+  - [5.2. Baseline, Resnet50, Reduced Dataset, Training All Layers](#52-baseline-resnet50-reduced-dataset-training-all-layers)
+  - [5.3. Baseline, Resnet50, Reduced Dataset, Training Last 34 Layers](#53-baseline-resnet50-reduced-dataset-training-last-34-layers)
+
 
 ## 0. Requirements
 This project was done in January 2022. It uses TensorFlow 2.
@@ -105,6 +110,12 @@ We consider duplicates when two or more files have the same condition and md5.
 The Mendeley dataset we used (as the Kaggle one) contains a total of 84,484 files, of which 7,357 are duplicates. We ended with 77,127 usable files. We used a Pandas DataFrame to store these files’ information and to do further work.
 
 ## 5. Baseline experiments
+
+### 5.1. Baseline, Resnet50, Full Dataset, Training All Layers
+
+### 5.2. Baseline, Resnet50, Reduced Dataset, Training All Layers
+
+### 5.3. Baseline, Resnet50, Reduced Dataset, Training Last 34 Layers
 
 
 
