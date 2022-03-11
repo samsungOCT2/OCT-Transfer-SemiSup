@@ -16,19 +16,11 @@
   - [4.2. Data Wrangling conclusions](#42-data-wrangling-conclusions)
 - [5. Model and Hyperparameter selection](#5-model-and-hyperparameter-selection)
 - [6. Baseline experiments](#6-baseline-experiments)
-  - [6.1. Baseline, Resnet50, Full Dataset, Training All Layers](#61-baseline-resnet50-full-dataset-training-all-layers)
-    - [6.1.1. v1 OCT TensorFlow Resnet 50 Model.ipynb](#611-v1-oct-tensorflow-resnet-50-modelipynb)
-    - [6.1.2. v2_model OCT TensorFlow Resnet 50 Model.ipynb](#612-v2model-oct-tensorflow-resnet-50-modelipynb)
-  - [6.2. Baseline, Resnet50, Reduced Dataset, Training All Layers](#62-baseline-resnet50-reduced-dataset-training-all-layers)
-    - [6.2.1. v2_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb](#621-v2reduced5percent-oct-tensorflow-resnet-50-modelipynb)
-    - [6.2.2. v2_reduced_10percent OCT TensorFlow Resnet 50 Model.ipynb](#622-v2reduced10percent-oct-tensorflow-resnet-50-modelipynb)
-    - [6.2.3. v2_reduced_20percent OCT TensorFlow Resnet 50 Model.ipynb](#623-v2reduced20percent-oct-tensorflow-resnet-50-modelipynb)
-    - [6.2.4. v2_reduced_30percent OCT TensorFlow Resnet 50 Model.ipynb](#624-v2reduced30percent-oct-tensorflow-resnet-50-modelipynb)
-  - [6.3. Baseline, Resnet50, Reduced Dataset, Training Last 34 Layers](#63-baseline-resnet50-reduced-dataset-training-last-34-layers)
-    - [6.3.1. v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb](#631-v2frozenreduced5percent-oct-tensorflow-resnet-50-modelipynb)
-    - [6.3.2. v2_frozen_reduced_10percent OCT TensorFlow Resnet 50 Model.ipynb](#632-v2frozenreduced10percent-oct-tensorflow-resnet-50-modelipynb)
-    - [6.3.3. v2_frozen_reduced_20percent OCT TensorFlow Resnet 50 Model.ipynb](#633-v2frozenreduced20percent-oct-tensorflow-resnet-50-modelipynb)
-    - [6.3.4. v2_frozen_reduced_30percent OCT TensorFlow Resnet 50 Model.ipynb](#634-v2frozenreduced30percent-oct-tensorflow-resnet-50-modelipynb)
+  - [6.1. Baseline experiments (1), Resnet50, Full Dataset, Training All Layers](#61-baseline-experiments-1-resnet50-full-dataset-training-all-layers)
+  - [6.2. Baseline experiments (2), Resnet50, Reduced Dataset, Training All Layers](#62-baseline-experiments-2-resnet50-reduced-dataset-training-all-layers)
+  - [6.3. Baseline experiments (3), Resnet50, Reduced Dataset, Training Last 34 Layers](#63-baseline-experiments-3-resnet50-reduced-dataset-training-last-34-layers)
+  - [6.4. v2_model OCT TensorFlow Resnet 50 Model.ipynb](#64-v2model-oct-tensorflow-resnet-50-modelipynb)
+  - [6.5. v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb](#65-v2frozenreduced5percent-oct-tensorflow-resnet-50-modelipynb)
 - [7. Transfer Learning](#7-transfer-learning)
   - [7.1. The Dataset](#71-the-dataset)
   - [7.2. The Notebooks](#72-the-notebooks)
@@ -142,7 +134,7 @@ Both datasets contained the same unduplicated files. Se from this point on we us
 
 We use the [Mendeley Dataset](https://data.mendeley.com/public-files/datasets/rscbjbr9sj/files/5699a1d8-d1b6-45db-bb92-b61051445347/file_downloaded).
 
-<div align="center">
+<div align="center" style="max-width: 450px;">
 
 |Dataset class (conditions) distribution|
 |:-:|
@@ -159,6 +151,7 @@ The Mendeley dataset we used (as the Kaggle one) contains a total of 84,484 file
 
 
 ## 5. Model and Hyperparameter selection
+*[↑ TOC](#table-of-contents)*
 
 
 
@@ -172,37 +165,63 @@ Many experiments were done for our baseline, these are listed in the below secti
 All experiments were done using 30 epochs, to allow us to have comparable results.
 
 Not all of these experiments were presented in the [Report](./report.pdf) and in the [Presentation](./presentation.pdf), we presented what was more relevant and what made more sense in terms of comparison to the following experiments. The important baselines are:
-- [6.1.2. v2_model OCT TensorFlow Resnet 50 Model.ipynb](#612-v2model-oct-tensorflow-resnet-50-modelipynb)
-- [6.3.1. v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb](#631-v2frozenreduced5percent-oct-tensorflow-resnet-50-modelipynb)
+- [6.4. v2_model OCT TensorFlow Resnet 50 Model.ipynb](#64-v2model-oct-tensorflow-resnet-50-modelipynb)
+- [6.5. v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb](#65-v2frozenreduced5percent-oct-tensorflow-resnet-50-modelipynb)
 
-### 6.1. Baseline, Resnet50, Full Dataset, Training All Layers
+### 6.1. Baseline experiments (1), Resnet50, Full Dataset, Training All Layers
 *[↑ TOC](#table-of-contents)*
 
 The idea behind these experiments was to have a baseline with a fully trained Neural Network using the complete dataset.
 
-Two experiments were done.
+Two experiments were done:
+- (**_**) [`baselines/resnet50_full_dataset_training_all_layers/v1 OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_full_dataset_training_all_layers/v1%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
+- (**x**) [`baselines/resnet50_full_dataset_training_all_layers/v2_model OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_full_dataset_training_all_layers/v2_model%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
 
-#### 6.1.1. v1 OCT TensorFlow Resnet 50 Model.ipynb
+**_**: Not used for the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
+<br>**x**: Used for the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
+
+### 6.2. Baseline experiments (2), Resnet50, Reduced Dataset, Training All Layers
 *[↑ TOC](#table-of-contents)*
 
-**(Not taken into account in the [Report](./report.pdf) and in the [Presentation](./presentation.pdf).)**
+The idea behind these experiments was to have a baseline with a fully trained Neural Network a reduced dataset.
 
-[`baselines/resnet50_full_dataset_training_all_layers/v1 OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_full_dataset_training_all_layers/v1%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
+Four experiments were done:
+- (**_**) [`baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_5percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
+- (**_**) [`baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_10percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_10percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
+- (**_**) [`baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_20percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_20percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
+- (**_**) [`baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_30percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_30percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
 
-This was the initial notebook to try Resnet50.
+**_**: Not used for the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
+<br>**x**: Used for the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
 
-#### 6.1.2. v2_model OCT TensorFlow Resnet 50 Model.ipynb
+### 6.3. Baseline experiments (3), Resnet50, Reduced Dataset, Training Last 34 Layers
+*[↑ TOC](#table-of-contents)*
+
+The idea behind these experiments was to have a baseline with a Neural Network trained on only the last 34 layers and a reduced dataset.
+
+Four experiments were done:
+- (**x**) [`baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_5percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
+- (**_**) [`baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_10percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_10percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
+- (**_**) [`baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_20percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_20percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
+- (**_**) [`baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_30percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_30percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
+
+**_**: Not used for the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
+<br>**x**: Used for the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
+
+### 6.4. v2_model OCT TensorFlow Resnet 50 Model.ipynb
 *[↑ TOC](#table-of-contents)*
 
 [`baselines/resnet50_full_dataset_training_all_layers/v2_model OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_full_dataset_training_all_layers/v2_model%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
 
 This notebook used the hyperparameters obtained in model and hyperparameter selection. It was used for comparison purposes in the [Report](./report.pdf) and in the [Presentation](./presentation.pdf).
 
-From this point on, all notebooks use the same model (Resnet50) and the same hyperparameters.
+About this model:
+- The weights were initialized with the ImageNet weights and all layers were trained.
+- Trained on the complete the training set.
 
 Below are some images with stats about this model.
 
-<div align="center">
+<div align="center" style="max-width: 450px;">
 
 |v2_model OCT TensorFlow Resnet 50 Model.ipynb, classification report|
 |:-:|
@@ -210,7 +229,7 @@ Below are some images with stats about this model.
 
 </div>
 
-<div align="center">
+<div align="center" style="max-width: 450px;">
 
 |v2_model OCT TensorFlow Resnet 50 Model.ipynb, confusion matrix|
 |:-:|
@@ -218,7 +237,7 @@ Below are some images with stats about this model.
 
 </div>
 
-<div align="center">
+<div align="center" style="max-width: 450px;">
 
 |v2_model OCT TensorFlow Resnet 50 Model.ipynb, classification with heatmap|
 |:-:|
@@ -226,50 +245,20 @@ Below are some images with stats about this model.
 
 </div>
 
-### 6.2. Baseline, Resnet50, Reduced Dataset, Training All Layers
-*[↑ TOC](#table-of-contents)*
-
-#### 6.2.1. v2_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb
-*[↑ TOC](#table-of-contents)*
-
-**(Not taken into account in the [Report](./report.pdf) and in the [Presentation](./presentation.pdf).)**
-
-[`baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_5percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
-
-#### 6.2.2. v2_reduced_10percent OCT TensorFlow Resnet 50 Model.ipynb
-*[↑ TOC](#table-of-contents)*
-
-**(Not taken into account in the [Report](./report.pdf) and in the [Presentation](./presentation.pdf).)**
-
-[`baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_10percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_10percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
-
-#### 6.2.3. v2_reduced_20percent OCT TensorFlow Resnet 50 Model.ipynb
-*[↑ TOC](#table-of-contents)*
-
-**(Not taken into account in the [Report](./report.pdf) and in the [Presentation](./presentation.pdf).)**
-
-[`baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_20percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_20percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
-
-#### 6.2.4. v2_reduced_30percent OCT TensorFlow Resnet 50 Model.ipynb
-*[↑ TOC](#table-of-contents)*
-
-**(Not taken into account in the [Report](./report.pdf) and in the [Presentation](./presentation.pdf).)**
-
-[`baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_30percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_all_layers/v2_reduced_30percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
-
-### 6.3. Baseline, Resnet50, Reduced Dataset, Training Last 34 Layers
-*[↑ TOC](#table-of-contents)*
-
-#### 6.3.1. v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb
+### 6.5. v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb
 *[↑ TOC](#table-of-contents)*
 
 [`baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_5percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
 
-This model served as a reduced dataset baseline for the following experiments.
+This notebook used the hyperparameters obtained in model and hyperparameter selection. It was used for comparison purposes in the [Report](./report.pdf) and in the [Presentation](./presentation.pdf).
+
+About this model:
+- The weights were initialized with the ImageNet weights and all layers were frozen except the last 34 for training.
+- Trained on only 5% of the training set.
 
 Below are some images with stats about this model.
 
-<div align="center">
+<div align="center" style="max-width: 450px;">
 
 |v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb, classification report|
 |:-:|
@@ -277,7 +266,7 @@ Below are some images with stats about this model.
 
 </div>
 
-<div align="center">
+<div align="center" style="max-width: 450px;">
 
 |v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb, confusion matrix|
 |:-:|
@@ -285,34 +274,13 @@ Below are some images with stats about this model.
 
 </div>
 
-<div align="center">
+<div align="center" style="max-width: 450px;">
 
 |v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb, classification with heatmap|
 |:-:|
 |![v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb, classification with heatmap](./images/v2_frozen_reduced_5percent%20OCT%20TensorFlow%20Resnet%2050%20Model_classification_heatmap.png)|
 
 </div>
-
-#### 6.3.2. v2_frozen_reduced_10percent OCT TensorFlow Resnet 50 Model.ipynb
-*[↑ TOC](#table-of-contents)*
-
-**(Not taken into account in the [Report](./report.pdf) and in the [Presentation](./presentation.pdf).)**
-
-[`baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_10percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_10percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
-
-#### 6.3.3. v2_frozen_reduced_20percent OCT TensorFlow Resnet 50 Model.ipynb
-*[↑ TOC](#table-of-contents)*
-
-**(Not taken into account in the [Report](./report.pdf) and in the [Presentation](./presentation.pdf).)**
-
-[`baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_20percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_20percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
-
-#### 6.3.4. v2_frozen_reduced_30percent OCT TensorFlow Resnet 50 Model.ipynb
-*[↑ TOC](#table-of-contents)*
-
-**(Not taken into account in the [Report](./report.pdf) and in the [Presentation](./presentation.pdf).)**
-
-[`baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_30percent OCT TensorFlow Resnet 50 Model.ipynb`](./baselines/resnet50_reduced_dataset_training_last34_layers/v2_frozen_reduced_30percent%20OCT%20TensorFlow%20Resnet%2050%20Model.ipynb)
 
 
 
