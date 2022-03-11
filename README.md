@@ -20,14 +20,14 @@
   - [6.1. Baseline experiments (1), Resnet50, Full Dataset, Training All Layers](#61-baseline-experiments-1-resnet50-full-dataset-training-all-layers)
   - [6.2. Baseline experiments (2), Resnet50, Reduced Dataset, Training All Layers](#62-baseline-experiments-2-resnet50-reduced-dataset-training-all-layers)
   - [6.3. Baseline experiments (3), Resnet50, Reduced Dataset, Training Last 34 Layers](#63-baseline-experiments-3-resnet50-reduced-dataset-training-last-34-layers)
-  - [6.4. v2_model OCT TensorFlow Resnet 50 Model.ipynb](#64-v2model-oct-tensorflow-resnet-50-modelipynb)
-  - [6.5. v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb](#65-v2frozenreduced5percent-oct-tensorflow-resnet-50-modelipynb)
+  - [6.4. v2_model OCT TensorFlow Resnet 50 Model.ipynb](#64-v2_model-oct-tensorflow-resnet-50-modelipynb)
+  - [6.5. v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb](#65-v2_frozen_reduced_5percent-oct-tensorflow-resnet-50-modelipynb)
 - [7. Transfer Learning](#7-transfer-learning)
   - [7.1. The Dataset](#71-the-dataset)
   - [7.2. The Notebooks](#72-the-notebooks)
 - [8. Semi-Supervised Learning](#8-semi-supervised-learning)
 - [9. Extra Files](#9-extra-files)
-  - [9.1 get_stats_on_test_set.py](#91-getstatsontestsetpy)
+  - [9.1 get_stats_on_test_set.py](#91-get_stats_on_test_setpy)
 ---
 
 
@@ -167,8 +167,8 @@ Many experiments were done for our baseline, these are listed in the below secti
 All experiments were done using 30 epochs, to allow us to have comparable results.
 
 Not all of these experiments were presented in the [Report](./report.pdf) and in the [Presentation](./presentation.pdf), we presented what was more relevant and what made more sense in terms of comparison to the following experiments. The important baselines are:
-- [6.4. v2_model OCT TensorFlow Resnet 50 Model.ipynb](#64-v2model-oct-tensorflow-resnet-50-modelipynb)
-- [6.5. v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb](#65-v2frozenreduced5percent-oct-tensorflow-resnet-50-modelipynb)
+- [6.4. v2_model OCT TensorFlow Resnet 50 Model.ipynb](#64-v2_model-oct-tensorflow-resnet-50-modelipynb)
+- [6.5. v2_frozen_reduced_5percent OCT TensorFlow Resnet 50 Model.ipynb](#65-v2_frozen_reduced_5percent-oct-tensorflow-resnet-50-modelipynb)
 
 ## 6.1. Baseline experiments (1), Resnet50, Full Dataset, Training All Layers
 *[↑ TOC](#table-of-contents)*
