@@ -52,6 +52,8 @@ It was the Capstone Project for the Machine Learning Engineer course by [FourthB
 
 Check out the [Report](./report.pdf) and the [Presentation](./presentation.pdf).
 
+Also check the video on [YouTube](https://www.youtube.com/watch?v=aTIBAZ2GBiM).
+
 
 
 
